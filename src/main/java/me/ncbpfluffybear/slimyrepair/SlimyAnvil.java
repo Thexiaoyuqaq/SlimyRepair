@@ -59,7 +59,7 @@ public class SlimyAnvil extends SlimefunItem implements RecipeDisplayItem {
                     Damageable damageable = (Damageable) meta;
 
                     if (!SlimyRepair.repairMap.containsKey(sfItem)) {
-                        send(p, "&cThis item can not be repaired!");
+                        send(p, "&c这个物品不能被修复!");
                         return;
                     }
 
@@ -73,17 +73,17 @@ public class SlimyAnvil extends SlimefunItem implements RecipeDisplayItem {
                         } else {
                             itemName = toTitleCase(repairItem.getType().name().replace('_', ' '));
                         }
-                        send(p, "&aThis item can be repaired!" +
-                            "\n  &bRequires: &e" + itemName +
-                            "\n  &bRepairs: &e" + SlimyRepair.repairMap.get(sfItem).getSecondValue() + " Durability" +
-                            "\n  &6Sneak and right click the Slimy Anvil to repair this item!!");
+                        send(p, "&a这个物品可以被修复!" +
+                            "\n  &b需求: &e" + itemName +
+                            "\n  &b修复: &e" + SlimyRepair.repairMap.get(sfItem).getSecondValue() + " 耐久度" +
+                            "\n  &6下蹲右键粘液科技铁砧来修复此物品!");
                         return;
                     }
 
                     // Block interaction if the item is repaired AFTER checking for sneaking in case
                     // the player only wants to see item info.
                     if (!damageable.hasDamage()) {
-                        send(p, "&cThis item is already repaired!");
+                        send(p, "&c物品已被修复!");
                         return;
                     }
 
@@ -96,9 +96,9 @@ public class SlimyAnvil extends SlimefunItem implements RecipeDisplayItem {
                         damageable.setDamage(damage - SlimyRepair.repairMap.get(sfItem).getSecondValue());
                         item.setItemMeta(meta);
 
-                        send(p, "&aYour item has been repaired!");
+                        send(p, "&a你的物品已经被修复!");
                     } else {
-                        send(p, "&cYou do not have sufficient materials to repair this item!");
+                        send(p, "&c修复材料不足!");
                     }
                 }
 
