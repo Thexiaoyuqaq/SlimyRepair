@@ -124,7 +124,7 @@ public class SlimyAnvil extends SlimefunItem implements RecipeDisplayItem {
     }
 
     private void send(Player p, String message) {
-        p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7[&a&l粘液科技&7&l铁砧&8] " + message));
+        p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7[&a&l粘液&7&l铁砧&8] " + message));
     }
 
     public static String toTitleCase(String givenString) {
