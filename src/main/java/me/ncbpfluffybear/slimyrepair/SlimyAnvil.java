@@ -76,7 +76,7 @@ public class SlimyAnvil extends SlimefunItem implements RecipeDisplayItem {
                         send(p, "&a这个物品可以被修复!" +
                             "\n  &b需求: &e" + itemName +
                             "\n  &b修复: &e" + SlimyRepair.repairMap.get(sfItem).getSecondValue() + " 耐久度" +
-                            "\n  &6下蹲右键粘液科技铁砧来修复此物品!");
+                            "\n  &6下蹲右键使用粘液铁砧来修复此物品!");
                         return;
                     }
 
